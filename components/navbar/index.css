@@ -1,0 +1,316 @@
+.nav-bar {
+  background: #FFFFFF;
+  height: 5.6rem;
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.10);
+  position: fixed;
+  bottom: 0;
+  z-index: 14;
+  width: 100%;
+}
+.nav-bar-horizontal li {
+  display: inline-block;
+  width: 20%;
+}
+.nav-bar-menu {
+  padding: 0.6rem 0;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.nav-bar-menu .icon-logo-nav {
+  width: 2.4rem;
+  height: 2.7rem;
+  display: -webkit-box;
+  margin: 0 auto;
+  fill: #444A59;
+}
+.nav-bar-menu .active .icon-logo-nav {
+  fill: #03A9F4;
+}
+.nav-bar-menu .icon-logo-nav svg {
+  margin: 0 auto;
+  display: block;
+}
+.nav-bar-menu .truebil-direct {
+  background: #5C6AC4;
+  width: 62px;
+  height: 28px;
+  padding: 8px 0;
+  border: 1px solid #5C6AC4;
+  border-radius: 21px;
+}
+.nav-bar-menu .truebil-direct svg {
+  height: 10px;
+  fill: #fff;
+}
+.nav-bar-menu .nav-bar-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444A59;
+  line-height: 1.2rem;
+  margin-top: 0.6rem;
+}
+.nav-bar-menu .active .nav-bar-text {
+  color: #03A9F4;
+}
+.link-not-active .nav-bar-menu .active .icon-logo-nav {
+  fill: #444A59;
+}
+.link-not-active .nav-bar-menu .active .nav-bar-text {
+  color: #444A59;
+}
+.nav-bar-horizontal .active-more .icon-logo-nav {
+  fill: #03A9F4;
+}
+.nav-bar-horizontal .active-more .nav-bar-text {
+  color: #03A9F4;
+}
+.nav-bar-more {
+  bottom: 0px !important;
+  height: 100% !important;
+  background-color: #fff;
+  left: 0px !important;
+  position: fixed !important;
+  right: 0px !important;
+  opacity: 0;
+  z-index: -1 !important;
+  transition: transform 0.3s ease-in, opacity 0.2s ease-in, z-index 0.00000001s ease-in 0.2s; 
+  transform: translateY(26%) !important;
+  padding: 2.4rem;
+  padding-bottom: 5.6rem;
+}
+.nav-bar-more.shown {
+  height: 100% !important;
+  opacity: 1;
+  top: 0px !important;
+  z-index: 12 !important;
+  transform: translateY(0px) !important;
+  background-color: #fff;
+  transition: transform 0.3s ease-out 0.1s, opacity 0.3s ease-out 0.1s; 
+  overflow: auto;
+  padding: 2.4rem;
+  padding-bottom: 5.6rem;
+}
+.nav-bar-more .login-sign-text {
+  font-size: 2rem;
+  color: #03A9F4;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+}
+.nav-bar-more .city-dropdown {
+  background: #FFFFFF;
+  border: 0.1rem solid #A3AEC2;
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0,0,0,0.10);
+  border-radius: 2px;
+  width: 11.4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  float: right;
+  font-weight: 500;
+  color: #444A59;
+  line-height: 1.8rem;
+  text-align: center;
+  display: table;
+  position: relative;
+}
+.nav-bar-more .city-dropdown .city-name {
+  display: table-cell;
+  vertical-align: middle;
+}
+.nav-bar-more .city-image {
+  display: none;
+}
+.nav-bar-more .signup-block {
+  display: inline-block;
+}
+.nav-bar-more .city-down-arrow {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding: 6px;
+}
+.nav-bar-more .city-down-arrow svg{
+  width: 1.2rem;
+  vertical-align: middle;
+}
+.signup-block,
+.login-tab {
+  display: block;
+}
+.show-guide .login-tab::after,
+.show-guide .signup-block::after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.show-guide .menu-header::after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 3rem;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+}
+.show-guide a,
+.show-guide .signup-block,
+.show-guide .city-dropdown,
+.show-guide .login-tab,
+.show-guide .menu-items,
+.show-guide .access-dashboard-tab {
+  pointer-events: none;
+}
+.menu-header-wrap .guide-text {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.signup-block {
+  margin-top: 1em;
+}
+.signup-block svg {
+  vertical-align: middle;
+  margin-bottom: 0.6rem;
+}
+.login-tab .name-profile-edit-wrap {
+  display: inline-block;
+  vertical-align: sub;
+}
+.login-tab .user-name {
+  font-size: 2rem;
+  color: #444A59;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+.login-tab .edit-profile {
+  font-size: 1.7rem;
+  color: #5C6AC4;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+.nav-header-wrap {
+  margin-bottom: 1.6rem;
+}
+.icon-more svg {
+  float: right;
+  width: 2.4rem;
+  height: 5.6rem;
+  fill: #444a59;
+}
+.nav-bar-more .primary-links {
+  border-bottom: 1px solid #E4E6ED;
+}
+.nav-bar-more .bottom-sepration {
+  border-bottom: 1px solid #E4E6ED;
+}
+.secondary-links-header {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #444A59;
+  letter-spacing: 0;
+  margin: 2rem 0 1rem 0;
+  line-height: 2.4rem;
+}
+.menu-items {
+  text-align: center;
+}
+.menu-list-item {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  display: block;
+}
+.menu-list-item ul a {
+  display: block;
+  color: #515759;
+  overflow: hidden;
+  position: relative;
+  border-left: 0.4rem solid transparent;
+  padding: 1rem 0;
+}
+.menu-list-content {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.menu-list-item .active {
+  color: #03A9F4; 
+}
+
+.menu-list-item .active .icon-more svg{
+  fill: #03A9F4; 
+}
+.menu-text {
+  font-size: 1.7rem;
+  color: #444A59;
+  line-height: 5.6rem;
+}
+.menu-list-content :hover{
+  cursor: pointer;
+}
+.menu-list-content.active .menu_icon,
+.menu-list-content.active .menu-text {
+  color: #03A9F4;
+}
+.access-dashboard-tab,
+.access-seller-tab {
+  display: block;
+  position: relative;
+}
+.access-dashboard-tab .text,
+.access-seller-tab .text {
+  font-size: 1.6rem;
+  vertical-align: super;
+  line-height: 4.8rem;
+}
+.icon-seller-svg {
+  background-position: -7.9rem -0.8rem;
+  width: 2.4rem;
+  height: 2.3rem;
+} 
+.access-dashboard-tab .icon-access-dashboard,
+.access-seller-tab .icon-access-dashboard {
+  margin: 0 1.8rem 0 0;
+}
+.icon-share-svg {
+  background-position: -4.5rem -0.9rem;
+  width: 2.4rem;
+  height: 2.2rem;
+}
+.btn-become-premium-user {
+  padding: 0 1rem;
+  line-height: 3.99rem;
+}
+nav, section {
+  display: block;
+}
+.menu-list-content.shortlisted-active .menu_icon {
+  color: #FF6670;
+}
+.menu-list-content.shortlisted-active .shortlisted-count {
+  float: right;
+  font-size: 1.14rem;
+  color: #FF6670;
+}
+.menu-list-content.shortlisted-active .menu-text {
+  color: #444A59;
+}
+.nav-bar-more .menu-list-item .active {
+  color: #03A9F4;
+}
+.guide-text {
+  font-size: 2rem;
+  color: #444A59;
+  letter-spacing: 0;
+  line-height: 2.4rem;
+  margin-top: 0;
+  font-weight: 500;
+}

@@ -1,0 +1,60 @@
+{
+  "name": "pwa-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "REACT_APP_ENV=development node server.js",
+    "build:development": "REACT_APP_ENV=development next build",
+    "build:prestaging": "REACT_APP_ENV=prestaging next build",
+    "build:staging": "REACT_APP_ENV=staging next build",
+    "build:production": "REACT_APP_ENV=production next build",
+    "deploy": "sh scripts/build_script.sh && s3cmd put build.tar.gz s3://assets-tb/pwa-ssr/",
+    "deploy:prestaging": "sh scripts/build_script.sh && s3cmd put build.tar.gz s3://assets-tb/pwa-ssr-prestaging/",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/truebil/pwa-ssr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/truebil/pwa-ssr#readme",
+  "dependencies": {
+    "@zeit/next-preact": "^0.1.0",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "isomorphic-unfetch": "^2.1.1",
+    "js-cookie": "^2.2.0",
+    "newrelic": "^5.6.1",
+    "next": "^6.1.1",
+    "next-compose-plugins": "^2.1.1",
+    "next-redux-wrapper": "^2.0.0",
+    "next-routes": "^1.4.2",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "react": "^16.4.2",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.4.2",
+    "react-lazy-load": "^3.0.13",
+    "react-load-script": "0.0.6",
+    "react-nouislider": "2.0.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-slick": "^0.23.1",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
+    "slick-carousel": "github:truebil/slick#master",
+    "sw-precache-webpack-plugin": "^0.11.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-loader": "^8.0.4",
+    "styled-jsx-css-loader": "^0.3.0",
+    "webpack": "^3.11.0"
+  }
+}

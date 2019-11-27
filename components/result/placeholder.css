@@ -1,0 +1,27 @@
+.result-page .placeholder {
+  background: #fff;
+  display: inline-block;
+  padding-bottom: 20px;
+  width: 100%;
+  padding-top: 2.4vw;
+}
+.result-page .placeholder .placeholder-line {
+  background-color: #f2f3f5;
+  height: 1.2rem;
+  margin: 1.1rem 1.4rem 0;
+}
+.result-page .placeholder .line-one {
+  height: 56vw;
+  background-color: #f2f3f5;
+  margin-left: 16px;
+  border-radius: 8px;
+}
+.result-page .placeholder .line-two {
+  width: 70%;
+}
+.result-page .placeholder .line-three {
+  width: 85%;
+}
+.result-page .placeholder .line-four {
+  width: 44%;
+}

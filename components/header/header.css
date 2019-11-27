@@ -1,0 +1,36 @@
+.tb-header-wrap {
+  height: 60px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+.tb-header-wrap .location-date {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+.tb-header-wrap .location-date-content {
+  flex-basis: 92%;
+  width: 92%;
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+  flex: 1 0 auto;
+}
+.text-location {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #212121;
+}
+.text-date {
+  font-size: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #9b9b9b;
+}

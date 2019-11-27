@@ -1,0 +1,27 @@
+.toast-conatiner {
+  display: table;
+  position: fixed;
+  height: 48px;
+  box-shadow: 0 2px 4px 0 #000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 0 16px;
+  transition: opacity .2s ease-out, transform .3s ease-out;
+  transform: translateY(100%);
+  z-index: 1000;
+  opacity: 0;
+  background-color: #444A59;
+  color: #FFF;
+}
+.toast-text {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.toast-show {
+  transform: translateY(0)!important;
+  opacity: 1;
+}
