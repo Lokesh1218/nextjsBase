@@ -15,7 +15,7 @@ class Layout extends React.Component {
     super(props);
     var lastScroll;
     var deferredPrompt;
-    this.initApp = this.initApp.bind(this);
+   
     this.popstateEventHandler = this.popstateEventHandler.bind(this);
   }
 
@@ -26,10 +26,7 @@ class Layout extends React.Component {
       classObj.popstateEventHandler(hashURL);
     });
 
-    this.initApp();
-
     Router.router.events.on('routeChangeComplete', this.handleRouteChangeComplete);
-    this.sendGAForAppOpenByA2HS();
 
     // Code for add to home screen
     window.addEventListener('scroll', function(e) {
@@ -49,21 +46,6 @@ class Layout extends React.Component {
 
       return false;
     });
-  }
-
-  /**
-   * Send GA app_opened_by_a2hs if app open by A2HS
-   */
-  sendGAForAppOpenByA2HS() {
-    // app launch in standalone mode after clicking a2hs 
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      // send once per session
-      if (!sessionStorage.getItem('isOpenByA2HS')) {
-        sessionStorage.setItem('isOpenByA2HS', true);
-        // Drop Ga app_opened_by_a2hs
-        dropGAPixel('addToHomeScreen', 'app_opened_by_a2hs', TruebilStorage.getItem('component'), 0);
-      }
-    }
   }
 
   handleScroll = (event, classObj) => {
@@ -102,20 +84,6 @@ class Layout extends React.Component {
     TruebilStorage.setItem('overlayNumber', 0);
     this.props.dispatch(closeModal({ isMoreClicked: false }));
     document.body.classList.remove('overflow-hidden');
-  }
-
-  /**
-    * App initialization
-    */
-  initApp() {
-    const config = this.props.config;
-    const cityInfo = config.cityInfo;
-    const cityId = cityInfo.id;
-
-    if (cityId) {
-      Cookies.set('city_id', cityId);
-      TruebilStorage.setItem('cityInfo', JSON.stringify(cityInfo));
-    }
   }
 
   popstateEventHandler = (hashURL) => {

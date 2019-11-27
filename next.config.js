@@ -7,10 +7,7 @@ const withPreact = require('@zeit/next-preact')
 
 module.exports  = {
     publicRuntimeConfig: { // Will be available on both server and client
-      assetsUrl: 'https://dw745fgl22f1q.cloudfront.net/',
-      zopimUrl: 'https://v2.zopim.com/?34FJfAwL7KXZkla117ZSxcU7rBwhvkWY',
-      razorpayUrl: 'https://checkout.razorpay.com/v1/checkout.js',
-      ravenLibUrl: 'https://cdn.ravenjs.com/3.22.1/raven.min.js',
+      
     },
     useFileSystemPublicRoutes: true,
     webpack: (config, {defaultLoaders, isServer, buildId, dev}) => {

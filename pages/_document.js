@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-import {apiUrl, ravenKey} from '.././globalConstants';
+import {apiUrl} from '.././globalConstants';
 
 export default class MyDocument extends Document {
   render() {
@@ -23,10 +23,6 @@ export default class MyDocument extends Document {
           <link rel="dns-prefetch" href="https://d1bxm722pxmpby.cloudfront.net/" />
           <link rel="preconnect" href="https://dw745fgl22f1q.cloudfront.net/" crossOrigin="true"/>
           <link rel="preconnect" href={apiUrl} crossOrigin="true"/>
-          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-          <link rel="dns-prefetch" href="https://connect.facebook.net" />
-          <link rel="dns-prefetch" href="https://checkout.razorpay.com" />
-          <link rel="dns-prefetch" href="https://cdn.ravenjs.com" />
           <link rel="apple-touch-icon" href="https://dw745fgl22f1q.cloudfront.net/favicon/apple-touch-icon-76-v1.png" />
           <link rel="apple-touch-icon" sizes="57x57" href="https://dw745fgl22f1q.cloudfront.net/favicon/apple-touch-icon-57-v1.png" />
           <link rel="apple-touch-icon" sizes="76x76" href="https://dw745fgl22f1q.cloudfront.net/favicon/apple-touch-icon-76-v1.png" />
@@ -48,25 +44,9 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          <script dangerouslySetInnerHTML={{__html: `window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            window.ga('create', 'UA-60246145-1', 'auto');` }}
-          />
+          
           <Main />
           <NextScript />
-          <script async src='https://www.google-analytics.com/analytics.js'></script>
-          <script src="https://cdn.ravenjs.com/3.22.1/raven.min.js" crossOrigin="anonymous"></script>
-          <script dangerouslySetInnerHTML={{__html: `Raven.config(${"\'" + ravenKey + "\'"}).install()`}}
-          />
-          <script dangerouslySetInnerHTML={{__html: `
-            !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-              n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-              document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-              fbq('init', '450909781743909');
-              fbq('track', 'PageView');` }}
-          />
         </body>
       </html>
     )
